@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Q&A Web GUI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>💬 LLM Question-and-Answering System</h1>
+        <h2>Course Project CSC415 / CSC331</h2>
+        
+        <form method="POST" action="/">
+            <label for="question_input">Enter any question:</label>
+            <textarea id="question_input" name="question_input" rows="4" required 
+                      placeholder="e.g., What are the three laws of thermodynamics?">{{ raw_question }}</textarea>
+            <button type="submit">Get Answer</button>
+        </form>
+
+        {% if llm_response %}
+            <div class="results-section">
+                
+                <h3>Question Details</h3>
+                <p><strong>Raw Question:</strong> <em>{{ raw_question }}</em></p>
+                <p><strong>Processed Question (Pre-LLM):</strong> <code>{{ processed_question }}</code></p>
+                
+                <h3>LLM Generated Answer</h3>
+                <div class="answer-box">
+                    <pre>{{ llm_response }}</pre>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
