@@ -1,4 +1,4 @@
-Name: [Your Name]
-Matric number: [Your Matric Number]
-Live URL of hosted application: [Your Deployment URL, e.g., https://my-llm-qa.render.com]
-GitHub repository link: [Your GitHub URL]
+Name:Enebe Goodnews
+Matric number:22CG031856
+Live URL of hosted application: https://llm-qa-project-enebe-22cg031856-1.onrender.com
+GitHub repository link: https://github.com/Goodnews17/LLM_QA_Project_Enebe_22CG031856
